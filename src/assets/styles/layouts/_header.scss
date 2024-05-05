@@ -1,0 +1,26 @@
+.header__container {
+  justify-content: space-between;
+  max-width: $mqMaxWidth;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  .header__nav {
+    > ul {
+      display: flex;
+      margin-top: 16px;
+
+      a {
+        text-decoration: none;
+        color: $main-text-color;
+        font-size: large;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+
+        &:hover {
+          color: white;
+          background-color: #333;
+        }
+      }
+    }
+  }
+}
