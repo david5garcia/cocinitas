@@ -1,0 +1,76 @@
+.poster__image {
+  width: min(750px, 90%);
+}
+
+.poster__description {
+  margin: 3rem 0;
+}
+
+.poster__image {
+  border-radius: 20px;
+}
+
+.poster__title {
+  color: #fefefe;
+  font-size: 3.5rem;
+  text-shadow: 7px 0 #333, -2px 0 #333, 0 2px #333, 0 -2px #333, 1px 1px #333,
+    -1px -1px #333, 1px -1px #333, -1px 1px #333;
+}
+
+.poster__button {
+  background-color: #3a72ea;
+  color: white;
+  width: max-content;
+  height: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #fefefe;
+    color: #3a72ea;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+    }
+
+    .poster__image {
+      z-index: -1;
+      border-radius: 20px;
+      grid-area: 1 / 1 / 4 / 5;
+      box-shadow: 17px 25px 26px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .poster__button {
+      grid-area: 4 / 4 / 4 / 5;
+      grid-column-end: auto;
+    }
+
+    .poster__title {
+      grid-area: 1 / 4 / 2 / 6;
+      font-size: 5rem;
+    }
+
+    .poster__lottie {
+      grid-area: 2 / 4 / 3 / 6;
+      height: 100px;
+      width: 100px;
+    }
+
+    .poster__description {
+      margin: 0;
+      background-color: #fefefe;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 17px 25px 26px 6px rgba(0, 0, 0, 0.1);
+      grid-area: 3 / 1 / 4 / 3;
+    }
+  }
+}

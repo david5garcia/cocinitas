@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/index.scss"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>UOC Boilerplate</title>
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <div class="container">
+            <h1 class="poster__title">COCINITAS 2024</h1>
+            <div class="poster__lottie">
+                <lottie-player
+                    src="https://lottie.host/1b0607e3-b6b9-4e16-86a0-f203ec9cc9f5/s3GNtE6LqI.json"
+                    background="#ffffff00"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                    direction="1"
+                ></lottie-player>
+            </div>
+            <img
+                src="/src/assets/images/chef-cooking.jpg"
+                class="poster__image"
+                alt=""
+            />
+            <p class="poster__description">
+                ¡Demuestra tus habilidades culinarias y compite por fantásticos
+                premios! No pierdas la oportunidad de participar en el concurso
+                y demostrar tu talento. Si eres un amante de la cocina, esta es
+                tu oportunidad de brillar.
+            </p>
+            <a href="#" class="poster__button">¡Inscríbete ahora!</a>
+        </div>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </body>
 </html>
