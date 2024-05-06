@@ -6,7 +6,6 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $main-text-color: #333;
-$bg: color.scale(#f3f4f6, $lightness: 70%);
+$bg: color.scale(#f2cc80, $lightness: 70%);
 
-$mqMinWidth: 420px;
-$mqMaxWidth: 900px;
+$width: min(1000px, 90%);
