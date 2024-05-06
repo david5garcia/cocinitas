@@ -1,9 +1,10 @@
 .poster__image {
-  width: min(750px, 90%);
+  width: 90%;
 }
 
 .poster__description {
   margin: 3rem 0;
+  container-type: inline-size;
 }
 
 .poster__image {
@@ -18,16 +19,20 @@
 }
 
 .poster__button {
-  background-color: #3a72ea;
-  color: white;
   width: max-content;
   height: fit-content;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  &:hover {
-    background-color: #fefefe;
-    color: #3a72ea;
+}
+
+.container {
+  container-type: inline-size;
+}
+
+@container (min-width: 1000px) {
+  .poster__image {
+    width: 900px;
+  }
+  .poster__title {
+    font-size: 5rem;
   }
 }
 
@@ -50,12 +55,10 @@
 
     .poster__button {
       grid-area: 4 / 4 / 4 / 5;
-      grid-column-end: auto;
     }
 
     .poster__title {
       grid-area: 1 / 4 / 2 / 6;
-      font-size: 5rem;
     }
 
     .poster__lottie {
@@ -67,7 +70,7 @@
     .poster__description {
       margin: 0;
       background-color: #fefefe;
-      padding: 1rem;
+      padding: 2rem;
       border-radius: 10px;
       box-shadow: 17px 25px 26px 6px rgba(0, 0, 0, 0.1);
       grid-area: 3 / 1 / 4 / 3;
