@@ -4,47 +4,59 @@ $color-primary: color(display-p3 0.54 0.9 0.6);
 $color-secondary: color(display-p3 0.82 0.3 0.4);
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: color(lv 95%);
+  font-family: "Arial", sans-serif;
+  background-color: color(lv 95%);
 }
 
 h1 {
-    color: $main-text-color;
+  color: $main-text-color;
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 label {
-    color: $main-text-color;
+  color: $main-text-color;
 }
-
-
 
 button {
-    background-color: $secondary-text-color;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: $secondary-text-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 
-    &:hover {
-        background-color: lighten($secondary-text-color, 10%);
-    }
+  &:hover {
+    background-color: lighten($secondary-text-color, 10%);
+  }
 }
 
-
 .contact__card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    max-width: 500px;
-    margin: 0 auto;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  width: min(90%, 500px);
+  margin: 0 auto;
+
+  button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.carousel__container {
+  max-width: 500px;
+  margin: auto;
+
+  img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
 }
