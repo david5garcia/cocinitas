@@ -3,6 +3,7 @@ article {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  container-type: inline-size;
 }
 
 article h2 {
@@ -42,4 +43,11 @@ div:has(blockquote) {
 
 article :is(p, ul, blockquote, img) {
   margin: 30px 0;
+}
+
+@container (min-width: 500px) {
+  div:has(img) {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
