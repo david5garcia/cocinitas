@@ -1,5 +1,17 @@
 @import "./variables";
 
+@function calcular-sombra(
+  $horizontal,
+  $vertical,
+  $difuminado,
+  $extension,
+  $color
+) {
+  $sombra: $horizontal + px $vertical + px $difuminado + px $extension + px
+    $color;
+  @return $sombra;
+}
+
 $color-primary: color(display-p3 0.54 0.9 0.6);
 $color-secondary: color(display-p3 0.82 0.3 0.4);
 
@@ -38,7 +50,8 @@ button {
 .contact__card {
   background-color: white;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  container-type: inline-size;
+  box-shadow: calcular-sombra(0, 5, 5, 0, rgba(0, 0, 0, 0.1));
   padding: 20px;
   margin-bottom: 20px;
   border: 0;
@@ -48,6 +61,12 @@ button {
   button {
     width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+@container (max-width: 400px) {
+  .contact__card span {
+    display: none;
   }
 }
 
