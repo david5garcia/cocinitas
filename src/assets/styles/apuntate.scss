@@ -1,0 +1,50 @@
+@import "./variables";
+
+$color-primary: color(display-p3 0.54 0.9 0.6);
+$color-secondary: color(display-p3 0.82 0.3 0.4);
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: color(lv 95%);
+}
+
+h1 {
+    color: $main-text-color;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    color: $main-text-color;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid darken($main-text-color, 10%);
+    border-radius: 5px;
+    font-size: 16px;
+    color: darken($main-text-color, 20%);
+
+    &::placeholder {
+        color: darken($main-text-color, 40%);
+    }
+}
+
+button {
+    background-color: $secondary-text-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+        background-color: lighten($secondary-text-color, 10%);
+    }
+}
