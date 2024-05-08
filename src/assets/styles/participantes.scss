@@ -6,7 +6,7 @@
   gap: 50px;
 }
 
-.card {
+.participante__card {
   width: 30%;
   padding: 20px;
   box-shadow: 3px 19px 20px 5px rgba(0, 0, 0, 0.1);
@@ -16,11 +16,11 @@
   align-items: space-between;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.card img {
-  border-radius: 5px;
-  object-fit: cover;
+  
+  img {
+    border-radius: 5px;
+    object-fit: cover;
+  }
 }
 
 @container (max-width: 768px) {
